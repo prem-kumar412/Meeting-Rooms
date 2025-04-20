@@ -35,6 +35,6 @@ A simple and responsive Meeting Room Management System built with **HTML**, **CS
 
 ##  Deployment     
 
-The Meeting-Rooms is deployed and accessible online. You can use the following link to access the application: [Habit Tracker](https://prem-kumar412.github.io/Meeting-Rooms/)
+The Meeting-Rooms is deployed and accessible online. You can use the following link to access the application: [Meeting Rooms](https://prem-kumar412.github.io/Meeting-Rooms/)
 
 
