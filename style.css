@@ -1,0 +1,283 @@
+/* === General Styling === */
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f8f9fa;
+  color: #343a40;
+  margin: 0;
+  padding: 2rem;
+}
+.logo {
+    width: 30px;
+    margin: auto;
+
+    /* adjust the width as needed */
+    height: auto;
+}
+/* === Favicon Logo === */
+.favicon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+/* === Container Layout === */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+}
+
+/* === Headings === */
+h1, h2 {
+  text-align: center;
+  font-weight: 700;
+  color: #198754;
+  margin-bottom: 1.5rem;
+}
+.favicon {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+/* === Cards (Bootstrap Customization) === */
+.card {
+  border: none;
+  border-radius: 1rem;
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #0d6efd;
+}
+
+/* === Form Styling === */
+input.form-control {
+  border-radius: 0.6rem;
+}
+
+.btn {
+  border-radius: 0.6rem;
+  font-weight: 600;
+}
+
+/* === Room Display Areas === */
+#vacantRooms,
+#occupiedRooms {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;               /* More readable spacing */
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+/*  justify-content: center; /* Center items horizontally */*/
+}
+
+
+/* === Vacant Room Card === */
+.room-card {
+  background-color: #e6f4ea;
+  color: #198754;
+  padding: 0.7rem 1rem;
+  border-radius: 0.6rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 12px rgba(25, 135, 84, 0.1);
+  transition: background 0.3s ease;
+}
+
+.room-card:hover {
+  background-color: #d4edda;
+}
+
+/* Icon for vacant room */
+.room-card::before {
+  content: "🟢";
+  font-size: 1.2rem;
+}
+
+/* === Occupied Room Block === */
+.occupied-room {
+  background: #f8d7da;
+  color: #dc3545;
+  padding: 0.7rem 1rem;
+  border-radius: 0.6rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.1);
+}
+
+.occupied-room strong {
+  display: block;
+  font-size: 1rem;
+}
+
+/* === Room List Layout (Reusable for both types) === */
+.room-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+}
+
+
+
+/* ================================
+   Desktop - large screens (≥1200px)
+================================= */
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 2.8rem;
+  }
+
+  .card-title {
+    font-size: 1.6rem;
+  }
+
+  .room-card,
+  .occupied-room {
+    font-size: 1rem;
+  }
+}
+
+/* ================================
+   Laptops/Tablets (iPad Pro) - medium screens (992px–1199px)
+================================= */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  .container {
+    padding: 1.8rem;
+  }
+
+  .room-card,
+  .occupied-room {
+    flex: 1 1 48%;
+    font-size: 0.95rem;
+  }
+
+  .room-list {
+    gap: 12px;
+  }
+}
+
+/* ================================
+   Tablets (iPad, landscape) - small screens (768px–991px)
+================================= */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .container {
+    padding: 1.5rem;
+  }
+
+  .room-card,
+  .occupied-room {
+    flex: 1 1 100%;
+    font-size: 0.9rem;
+    text-align: center;
+    justify-content: center;
+  }
+
+  .room-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* ================================
+   Mobile Devices - portrait (≤767px)
+================================= */
+@media (max-width: 767.98px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  .favicon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .card {
+    margin-bottom: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.15rem;
+  }
+
+  input.form-control {
+    font-size: 0.9rem;
+    padding: 0.45rem 0.75rem;
+  }
+
+  .btn {
+    font-size: 0.95rem;
+    padding: 0.5rem;
+  }
+
+  .room-card,
+  .occupied-room {
+    font-size: 0.85rem;
+    padding: 0.6rem 0.8rem;
+    flex: 1 1 100%;
+  }
+
+  .room-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+}
+
+/* ================================
+   Small Phones (≤480px)
+================================= */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 0.9rem;
+    padding: 0.45rem;
+  }
+
+  input.form-control {
+    font-size: 0.85rem;
+  }
+}

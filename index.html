@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meeting Room Manager</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="icon" href="media/website-logo.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-light">
+
+  <div class="container py-5">
+    <h1 class="text-center text-primary mb-4">
+      <img src="media/team.jpg" alt="Logo" class="favicon"> Meeting Room Manager
+    </h1>
+
+    <div class="row g-4">
+      <!-- Enter Room Form -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title">Enter Room</h4>
+            <form>
+              <div class="mb-3">
+                <input type="number" id="employeeId" class="form-control" placeholder="Employee ID (1-100)">
+              </div>
+              <div class="mb-3">
+                <input type="number" id="roomId" class="form-control" placeholder="Room ID (1-15)">
+              </div>
+              <div class="mb-3">
+                <input type="text" id="meetingName" class="form-control" placeholder="Meeting Name (if first)">
+              </div>
+              <div class="mb-3">
+                <input type="number" id="capacity" class="form-control" placeholder="Capacity (if first)">
+              </div>
+              <button type="button" onclick="enterRoom()" class="btn btn-success w-100">Enter Room</button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leave Room Form -->
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <div class="card-body">
+            <h4 class="card-title">Leave Room</h4>
+            <form>
+              <div class="mb-3">
+                <input type="number" id="leaveEmployeeId" class="form-control" placeholder="Employee ID">
+              </div>
+              <button type="button" onclick="leaveRoom()" class="btn btn-danger w-100">Leave Room</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Room Status Display -->
+    <div class="row mt-5">
+      <div class="col-md-6">
+        <div class="p-3 bg-white shadow-sm rounded">
+          <h5 class="text-success text-center mb-3">Vacant Rooms</h5>
+          <div id="vacantRooms" class="room-list"></div>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="p-3 bg-white shadow-sm rounded">
+          <h5 class="text-danger text-center mb-3">Occupied Rooms</h5>
+          <div id="occupiedRooms" class="room-list"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
