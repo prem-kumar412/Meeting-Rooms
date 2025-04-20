@@ -26,5 +26,15 @@ A simple and responsive Meeting Room Management System built with **HTML**, **CS
 
 ---
 
-## 📁 Project Structure
+## Installation
+
+1. Install VS Code or Sublime Text 3 *(in case you haven't installed it)*.
+2. [Download the source code](https://github.com/prem-kumar412/Meeting-Rooms.git) and open a command prompt in the project's root folder.
+
+---
+
+##  Deployment     
+
+The Meeting-Rooms is deployed and accessible online. You can use the following link to access the application: [Habit Tracker](https://prem-kumar412.github.io/Meeting-Rooms/)
+
 
